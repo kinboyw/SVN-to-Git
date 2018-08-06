@@ -1,8 +1,8 @@
-[[TOC]]
-
+{:toc}
 
 
 # 从SVN到Git
+
 
 ## 安装Git-Windows
 
