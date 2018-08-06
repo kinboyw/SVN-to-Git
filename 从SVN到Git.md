@@ -1,4 +1,51 @@
-{:toc}
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [从SVN到Git](#%E4%BB%8Esvn%E5%88%B0git)
+  - [安装Git-Windows](#%E5%AE%89%E8%A3%85git-windows)
+    - [开始安装界面](#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2)
+    - [安装路径](#%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84)
+    - [建议全选](#%E5%BB%BA%E8%AE%AE%E5%85%A8%E9%80%89)
+    - [菜单文件夹](#%E8%8F%9C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9)
+    - [选择Git默认编辑器](#%E9%80%89%E6%8B%A9git%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E5%99%A8)
+    - [修改系统环境变量](#%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)
+    - [SSL证书的选择](#ssl%E8%AF%81%E4%B9%A6%E7%9A%84%E9%80%89%E6%8B%A9)
+    - [配置行尾结束符](#%E9%85%8D%E7%BD%AE%E8%A1%8C%E5%B0%BE%E7%BB%93%E6%9D%9F%E7%AC%A6)
+    - [配置 Git 终端](#%E9%85%8D%E7%BD%AE-git-%E7%BB%88%E7%AB%AF)
+    - [剩下的步骤默认就好了](#%E5%89%A9%E4%B8%8B%E7%9A%84%E6%AD%A5%E9%AA%A4%E9%BB%98%E8%AE%A4%E5%B0%B1%E5%A5%BD%E4%BA%86)
+  - [安装TotoiseGit](#%E5%AE%89%E8%A3%85totoisegit)
+    - [配置CRLF 自动转换](#%E9%85%8D%E7%BD%AEcrlf-%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2)
+  - [Git 常识](#git-%E5%B8%B8%E8%AF%86)
+  - [Git 常用操作命令](#git-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4)
+  - [Git 账号](#git-%E8%B4%A6%E5%8F%B7)
+  - [创建新仓库](#%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93)
+    - [登录Web前端](#%E7%99%BB%E5%BD%95web%E5%89%8D%E7%AB%AF)
+    - [新建项目](#%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE)
+    - [初始化本地仓库](#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93)
+  - [命令行演示常用操作](#%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%BC%94%E7%A4%BA%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C)
+    - [git clone - 远程仓库](#git-clone---%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93)
+    - [修改文档](#%E4%BF%AE%E6%94%B9%E6%96%87%E6%A1%A3)
+    - [git add - 添加修改到暂存区](#git-add---%E6%B7%BB%E5%8A%A0%E4%BF%AE%E6%94%B9%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA)
+    - [git commit - 提交暂存区地修改](#git-commit---%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E5%9C%B0%E4%BF%AE%E6%94%B9)
+    - [git fetch - 拉取远程分支数据到本地](#git-fetch---%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E6%95%B0%E6%8D%AE%E5%88%B0%E6%9C%AC%E5%9C%B0)
+    - [git pull - 取回并合并远程主机某个分支的更新到本地](#git-pull---%E5%8F%96%E5%9B%9E%E5%B9%B6%E5%90%88%E5%B9%B6%E8%BF%9C%E7%A8%8B%E4%B8%BB%E6%9C%BA%E6%9F%90%E4%B8%AA%E5%88%86%E6%94%AF%E7%9A%84%E6%9B%B4%E6%96%B0%E5%88%B0%E6%9C%AC%E5%9C%B0)
+      - [高级特性](#%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7)
+    - [git push - 推送本地提交到远程分支](#git-push---%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
+  - [图形界面的Git - SourceTree](#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%9A%84git---sourcetree)
+    - [先看看SourceTree的界面](#%E5%85%88%E7%9C%8B%E7%9C%8Bsourcetree%E7%9A%84%E7%95%8C%E9%9D%A2)
+      - [Local](#local)
+      - [Remote](#remote)
+      - [Clone](#clone)
+      - [Add](#add)
+      - [Create](#create)
+    - [clone 仓库到本地](#clone-%E4%BB%93%E5%BA%93%E5%88%B0%E6%9C%AC%E5%9C%B0)
+    - [修改文件](#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6)
+    - [add 修改到暂存区](#add-%E4%BF%AE%E6%94%B9%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA)
+    - [commit 提交暂存区的修改](#commit-%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9)
+    - [push 将本地分支推送到远程分支](#push-%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 # 从SVN到Git
