@@ -1,5 +1,9 @@
 # Symbolic Links|符号链接
 
+translated-by：王进波 2018.08.10 
+
+原文：[Symbolic links](https://github.com/git-for-windows/git/wiki/Symbolic-Links)
+
 Short version: there is no exact equivalent for POSIX symlinks on Windows, and the closest thing is unavailable for non-admins by default. Therefore, symlink emulation support is switched off by default and needs to be configured by you, the user, via the `core.symlinks=true` config setting.
 
 >  简介：Windows平台上没有与POSIX的symlinks完全对等的对象，最接近的一种类型（symbolic link）默认对非管理员用户是不可用的。所以，在安装Git-windows的时候，支持symlink 的选项默认是被关闭的，需要用户通过`core.symlinks=true` 配置项来手动配置。 
