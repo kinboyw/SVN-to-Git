@@ -16,7 +16,7 @@ Starting with Windows Vista, there is support for symbolic links. These are not 
 
 - Symbolic links are only available on Windows Vista and later, most notably not on XP
 
-  > Symbolic links 只在Windows Vista 和更新的版本中可用，XP中不可用。
+  > Symbolic links 只在Windows Vista 和更新的版本中可用，甚至XP中都不行。
 
 - You need the `SeCreateSymbolicLinkPrivilege` privilege, which is by default assigned only to Administrators and guarded by UAC, but can be assigned to other users or user groups (see below).
 
