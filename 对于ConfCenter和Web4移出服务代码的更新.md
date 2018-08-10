@@ -20,6 +20,10 @@ edit-by：王进波-2018.08.10
    >
    > 1. 将自己的分支`dev-yourname`  push到远程的`dev-yourname`分支
    >
+   >    ```shell
+   >    git push origin dev-yourname
+   >    ```
+   >
    > 2. 删除本地的CityWebService仓库，也就是上图第一个红框的文件夹
    >
    > 3. 在同样的路径下重新` clone` 该仓库代码
