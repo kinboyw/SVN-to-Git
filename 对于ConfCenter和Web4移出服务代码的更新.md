@@ -16,7 +16,7 @@ edit-by：王进波-2018.08.10
 
 2. 要重新`clone` CityWebService的代码，让Symbolic link 生效
 
-   > 具体操作如下：
+   > 具体操作如下：(*由于创建symbolic links需要管理员权限，所以以下命令需要用管理员权限启动 `CMD`、`Powershell` 或者 `Git Bash` *)
    >
    > 1. 将自己的分支`dev-yourname`  push到远程的`dev-yourname`分支
    >
