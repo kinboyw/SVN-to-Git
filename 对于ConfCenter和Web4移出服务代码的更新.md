@@ -29,7 +29,7 @@ edit-by：王进波-2018.08.10
    > 3. 在同样的路径下重新` clone` 该仓库代码
    >
    >    ```shell
-   >    git clone -b dev-yourname <url>		#dev-yourname是你自己的远程分支，<url> 替换成CityWebService的仓库Url
+   >    git clone -b dev-yourname -c core.symboliclinks=true <url>		#dev-yourname是你自己的远程分支，<url> 替换成CityWebService的仓库Url
    >    cd CityWebService 	#进入代码目录
    >    git pull origin develop		#从远程develop分支拉取最新的提交，里面包含了Symbolic link
    >    ```
