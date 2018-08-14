@@ -2,7 +2,7 @@
 
 edit-by：王进波 2018.08
 
-- [安装Git-Windows](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/InstallTotoiseGit.md)
+- [安装Git-Windows](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/InstallGitWindows.md)
 - [安装TotoiseGit](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/InstallTotoiseGit.md)
 - [Git 常用操作命令](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/CommenCmd.md)
 - [Git 账号与学习资料](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/GitlabAccount.md)
