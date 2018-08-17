@@ -10,6 +10,7 @@
 - [Nginx 配置文件nginx.conf中文详解](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/Nginx%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6nginx.conf%E4%B8%AD%E6%96%87%E8%AF%A6%E8%A7%A3.md) 
 - [关于12.1服务器的配置](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/%E5%85%B3%E4%BA%8E12.1%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE.md) 
 - [关于ConfCenter和Web4移出服务代码的更新](https://civpub.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/%E5%AF%B9%E4%BA%8EConfCenter%E5%92%8CWeb4%E7%A7%BB%E5%87%BA%E6%9C%8D%E5%8A%A1%E4%BB%A3%E7%A0%81%E7%9A%84%E6%9B%B4%E6%96%B0.md) 
+- [Git 使用Http(s)协议同步时修改验证](Git 使用Http(s)协议同步时修改验证.md)
 
 
 ## Markdown
