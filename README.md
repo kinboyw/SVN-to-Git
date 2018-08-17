@@ -2,15 +2,15 @@
  《从SVN到Git》 是这个项目最初的主体内容，后来将逐渐扩充了其他方面的内容。
 
 ## 目录
-- [从SVN到Git](从SVN到Git.md) 
-- [签出正式开发代码，修改，提交](签出正式开发代码，修改，提交.md) 
-- [Git 基础](Git 基础.md) 
-- [常用命令行](常用命令行.md) 
-- [让Git支持Windows Symbolic link](让Git支持Windows Symbolic link.md) 
-- [Nginx 配置文件nginx.conf中文详解](Nginx 配置文件nginx.conf中文详解.md) 
-- [关于12.1服务器的配置](关于12.1服务器的配置.md) 
-- [关于ConfCenter和Web4移出服务代码的更新](对于ConfCenter和Web4移出服务代码的更新.md) 
-- [Git 使用Http(s)协议同步时修改验证](Git 使用Http(s)协议同步时修改验证.md)
+- [从SVN到Git](doc/从SVN到Git.md) 
+- [签出正式开发代码，修改，提交](doc/签出正式开发代码，修改，提交.md) 
+- [Git 基础](doc/Git 基础.md) 
+- [常用命令行](doc/常用命令行.md) 
+- [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md) 
+- [Nginx 配置文件nginx.conf中文详解](doc/Nginx 配置文件nginx.conf中文详解.md) 
+- [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
+- [关于ConfCenter和Web4移出服务代码的更新](doc/对于ConfCenter和Web4移出服务代码的更新.md) 
+- [Git 使用Http(s)协议同步时修改验证](doc/Git 使用Http(s)协议同步时修改验证.md)
 
 
 ## Markdown
