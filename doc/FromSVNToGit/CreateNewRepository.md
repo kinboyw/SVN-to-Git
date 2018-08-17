@@ -84,7 +84,7 @@ git config --global core.safecrlf true		#打开安全crlf
 然后，我们要将Web前端创建的远程仓库的Url添加到本地的origin标识中
 
 ```shell
-git remote add origin https://civpub.vicp.net:8443/TestUse/test.git	#这里我们默认使用https
+git remote add origin https://civgit.vicp.net:8443/TestUse/test.git	#这里我们默认使用https
 git remote 	#该命令检查本地配置的远程标识，可能存在多个远程url
 git remote -v	#查看当前远程url的详细信息
 ```
@@ -103,7 +103,7 @@ git commit -m "initial commit"	#提交暂存区中的修改，双引号内的内
 ![1533177035857](../../imgs/1533177035857.png)
 
 ```shell
-git push origin master	#将当前工作目录中的所有提交推送到远端仓库，origin指向了 https://civpub.vicp.net:8443/TestUse/test.git，master是新建仓库的默认分支，我们将代码提交到master分支
+git push origin master	#将当前工作目录中的所有提交推送到远端仓库，origin指向了 https://civgit.vicp.net:8443/TestUse/test.git，master是新建仓库的默认分支，我们将代码提交到master分支
 #master 分支是默认受保护分支，执行push操作需要用户具有高于Developer的权限
 ```
 
@@ -113,7 +113,7 @@ Powershell中完整的输入输出如下
 PS F:\jekyllTest\mysite> git init
 Initialized empty Git repository in F:/jekyllTest/mysite/.git/
 PS F:\jekyllTest\mysite>  git remote
-PS F:\jekyllTest\mysite> git remote add origin https://civpub.vicp.net:8443/TestUse/test.git
+PS F:\jekyllTest\mysite> git remote add origin https://civgit.vicp.net:8443/TestUse/test.git
 PS F:\jekyllTest\mysite> git remote
 origin
 PS F:\jekyllTest\mysite> git add .
@@ -140,10 +140,10 @@ PS F:\jekyllTest\mysite> start .
 PS F:\jekyllTest\mysite> git init
 Initialized empty Git repository in F:/jekyllTest/mysite/.git/
 PS F:\jekyllTest\mysite> git remote -v
-PS F:\jekyllTest\mysite> git remote add origin https://civpub.vicp.net:8443/TestUse/test.git
+PS F:\jekyllTest\mysite> git remote add origin https://civgit.vicp.net:8443/TestUse/test.git
 PS F:\jekyllTest\mysite> git remote -v
-origin  https://civpub.vicp.net:8443/TestUse/test.git (fetch)
-origin  https://civpub.vicp.net:8443/TestUse/test.git (push)
+origin  https://civgit.vicp.net:8443/TestUse/test.git (fetch)
+origin  https://civgit.vicp.net:8443/TestUse/test.git (push)
 PS F:\jekyllTest\mysite> git add .
 PS F:\jekyllTest\mysite> git status
 On branch master
@@ -193,9 +193,9 @@ Compressing objects: 100% (15/15), done.
 Writing objects: 100% (16/16), 41.37 KiB | 3.76 MiB/s, done.
 Total 16 (delta 0), reused 0 (delta 0)
 remote: GitLab: You are not allowed to push code to protected branches on this project.
-To https://civpub.vicp.net:8443/TestUse/test.git
+To https://civgit.vicp.net:8443/TestUse/test.git
  ! [remote rejected] master -> master (pre-receive hook declined)
-error: failed to push some refs to 'https://civpub.vicp.net:8443/TestUse/test.git'
+error: failed to push some refs to 'https://civgit.vicp.net:8443/TestUse/test.git'
 PS F:\jekyllTest\mysite>
 #最后这里因为我用wangjinbo这个用户执行的push到master分支的操作，wangjinbo在test组的权限是developer，developer不允许向master推送提交
 ```

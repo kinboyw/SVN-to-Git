@@ -23,7 +23,7 @@
 
 ```shell
 cd /d E:\Codes\City #我们先用CMD命令行的CD命令导航到我们习惯存放代码的路径下
-git clone https://civpub.vicp.net:8443/TestUse/test.git CityTest #clone远程仓库
+git clone https://civgit.vicp.net:8443/TestUse/test.git CityTest #clone远程仓库
 ```
 
 ![1533178094362](../../imgs/1533178094362.png)

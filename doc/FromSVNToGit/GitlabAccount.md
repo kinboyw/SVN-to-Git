@@ -8,7 +8,7 @@
 
 ## Git 账号
 
-GitlabServer:  http://civpub.vicp.net:8880
+GitlabServer:  http://civgit.vicp.net:8880
 
 推荐的两处学习资源
 
