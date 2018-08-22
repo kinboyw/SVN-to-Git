@@ -20,21 +20,3 @@ GitlabServer:  http://civgit.vicp.net:8880
 
 大家用自己的帐号登录后修改登录密码和关联的邮箱
 Git通过配置的用户名和邮箱来标记每次提交的作者
-
-| 部门       | 姓名   | GitLabUser  | Password    |
-| ---------- | ------ | ----------- | ----------- |
-| 管理组     | 董鑫   | dongxin     | ZG9uZ3hpbg  |
-| 管理组     | 丁都   | dingdu      | ZGluZ2R1    |
-| 物联通讯   | 叶飞   | yefei       | 116d5e26    |
-| 应用研发部 | 周盼盼 | zhoupanpan  | 857bbd05    |
-| 应用研发部 | 李纪文 | lijiwen     | ee15c5c5    |
-| 应用研发部 | 喻天   | yutian      | OGJkMDJhYWI |
-| 模型研发部 | 徐鸿   | xuhong      | ZmI0ZWQ5NDE |
-| 模型研发部 | 谢礼   | xieli       | YTc1MjEyYWM |
-| 模型研发部 | 杨思琦 | yangsiqi    | NDI2Y2ZjOTg |
-| 算法研发部 | 邹舒畅 | zousuchang  | ODFjOTA1M2E |
-| 算法研发部 | 李涛涛 | litaotao    | NzBlYTM2MGE |
-| 移动研发部 | 马永欣 | mayongxin   | NjdhYjA2MTY |
-| 移动研发部 | 张思源 | zhangsiyuan | MzdiM2Q0Yjk |
-| 测试部     | 张小玉 | zhangxiaoyu | MWUzZDYyNmM |
-| 测试部     | 李骏杰 | lijunjie    | YmI4MzQwMzY |
