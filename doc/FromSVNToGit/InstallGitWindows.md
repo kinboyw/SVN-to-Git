@@ -18,13 +18,7 @@
 
 ## 安装Git-Windows
 
-Git-Windows [下载地址](https://git-scm.com/) ，在Git官网找到下载的链接 ，下载对应操作系统版本的 Git 安装包。虽然提供了下载好的安装程序，但是仍然建议大家自己动手去熟悉这个过程。
-
-
-
-> Git-Windows 安装过程如下，Git-Windows是Windows版本的命令行 Git 客户端工具，安装完以后就可以在命令行中完成大多数代码同步操作
-
-
+Git-Windows 下载地址[Git-2.18.0-64-bit.exe](../../%E5%B7%A5%E5%85%B7/Git-2.18.0-64-bit.exe) 
 
 ### 开始安装界面
 
@@ -63,10 +57,26 @@ Git-Windows [下载地址](https://git-scm.com/) ，在Git官网找到下载的�
 ### 配置行尾结束符
 
 - **这个地方请大家选择第三个** ，这里是一个巨坑，请注意 !!!!!!!!
-- 不同操作系统下的换行符有不同规范，Windows使用CRLF（即回车 + 换行： \r\n）结束一行，Mac和 Linux下使用LF（即换行：\r）结束一行。
-- 我们目前基本在Windows平台上开发和部署，不涉及跨平台问题，过去我们在编辑器（VS）中一般默认使用的是CRLF行尾结束符，过去我们使用的 SVN 仓库里也是使用的 CRLF，因此目前我们在 Git 中继续使用 CRLF 规范，作为开发者，我们需要统一规范，避免代码中出现行尾结束符混用的问题。
-- Git 一开始是用于管理Linux内核代码的，后来推广开以后，为了兼容Windows操作系统，它提供了一些行尾结束符转换的策略，这些策略可以在我们 `检出` 和 `commit` 代码的时候，由Git自动帮助我们完成 CRLF 和 LF 的转换。
-- 这个地方，我们不采用用 Git 的自动转换策略，我们希望在 `检出` 和 `commit` 代码的时候保留代码原有的行尾结束符。
+
+- Windows换行符是CRLF，即我们常用的\r\n，Linux平台的换行符是LF，为了兼容跨平台开发的需求，Gti默认会使用下面第一个选项，Checkout Windows-style，commit Unix-style line endings，即签出时转换为Windows风格，提交时转换为Unix风格，如果选默认的，我们以后每次提交，代码都会被转换成Unix风格，因为我们全部是Windows平台开发的，代码都是Windows风格换行，而且命令行里会出现一大堆转换日志，十分不美观，而且没必要
+
+- 这里我们选第三个选项，不执行自动转换，本地是什么风格，commit的时候就按原样提交
+
+- 如果在安装这一步选错了，还可以通过命令行来配置该选项
+
+  ```shell
+  git config --global core.autocrlf false
+  git config --global core.safecrlf true
+  ```
+
+  如果需要检查自己本地的配置是否正确，可以执行命令
+
+  ```shell
+  git config --global core.autocrlf 	#结果为false则是正确的，不执行自动转换
+  git config --global core.safecrlf 	#结果为tru则是正确的，不允许混合风格的提交
+  ```
+
+  
 
 ![img](https://upload-images.jianshu.io/upload_images/1625340-6f1357783077497e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/582) 
 
@@ -107,3 +117,6 @@ Git-Windows [下载地址](https://git-scm.com/) ，在Git官网找到下载的�
 - `git config --global core.autocrlf false` 要设置为false，这样 Git 会按照原样 `检出`和 `commit`代码，不会自动转换
 - `git config --global core.safecrlf true` 要设置为true，当 Git 检测到我们的代码中存在 `CRLF`  和 `LF` 混用的情况时会组织我们提交。
 
+第四步，允许Windows符号链接
+
+- `git config --global core.symlinks true` ，这里设置为true才可以正确下载我们部分代码项目

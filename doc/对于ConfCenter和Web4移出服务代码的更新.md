@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [CityWebService服务代码结构调整](#citywebservice%E6%9C%8D%E5%8A%A1%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4)
+    - [对开发环境有什么影响？](#%E5%AF%B9%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%BD%B1%E5%93%8D)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # CityWebService服务代码结构调整
 
 edit-by：王进波-2018.08.10
