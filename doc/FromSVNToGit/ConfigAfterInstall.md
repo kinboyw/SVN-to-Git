@@ -32,4 +32,8 @@
 
 ### 格式化日志输出
 
-`git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date='short'"`设置日志输出格式，设置后在命令行中可以通过`git hist`查看当前仓库的提交历史
+`git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date='short'"`
+
+执行上述命令设置日志输出格式，然后在命令行中执行`git hist` ，就可以查看当前仓库的提交历史。
+
+也可以执行`gitk` ，打开一个简易的GUI程序，能够比较清晰得查看提交历史
