@@ -1,4 +1,4 @@
-### 安装完成以后需要执行的配置
+## 安装完成以后需要执行的配置
 
 第一步，配置 Git 的用户名和邮箱，这两项配置会在我们提交代码时被添加到提交信息中，这样我们查看历史的时候就可以看到这个提交作者的信息了，这两项时Git必须的设置
 
@@ -25,3 +25,11 @@
 第四步，允许Windows符号链接
 
 - `git config --global core.symlinks true` ，这里设置为true才可以正确下载我们部分代码项目
+
+
+
+## 其他配置
+
+### 格式化日志输出
+
+`git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date='short'"`设置日志输出格式，设置后在命令行中可以通过`git hist`查看当前仓库的提交历史
