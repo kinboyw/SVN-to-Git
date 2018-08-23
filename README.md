@@ -11,6 +11,7 @@
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
 - [关于ConfCenter和Web4移出服务代码的更新](doc/对于ConfCenter和Web4移出服务代码的更新.md) 
 - [Git 使用Http(s)协议同步时修改验证](doc/Git 使用Http(s)协议同步时修改验证.md)
+- [部署环境搭建--面向实施](doc/部署环境搭建--面向实施.md)
 
 
 ## Markdown
