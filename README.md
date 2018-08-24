@@ -6,6 +6,9 @@
 - [Git安装配置和操作基本操作演示](doc/Git安装配置和操作基本操作演示.md) 
 - [签出正式开发代码，修改，提交](doc/签出正式开发代码，修改，提交.md) 
 - [Git同步密码输入错误后设置重新验证](doc/Git同步密码输入错误后设置重新验证.md)
+- [Git-Windows配置支持Git多账户](https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/ConfigAfterInstall.md#%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86)
+- [Git提交日志查看优化](https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/ConfigAfterInstall.md#%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA)
+- 优雅地从Git仓库中移除已追踪的文件
 
 ## 代码调整和部署说明
 

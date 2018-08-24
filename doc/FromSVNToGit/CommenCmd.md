@@ -9,15 +9,34 @@
 ## Git 常用操作命令
 
 - `git init`
+
 - `git clone`
+
 - `git add`
+
 - `git commit`
+
 - `git push`
+
 - `git fetch`
+
 - `git pull`
+
 - `git config`
+
 - ` git remote`
+
 - `git status`
+
 - `git branch`
+
 - `git checkout`
+
+
+
+## 优雅删除要忽略的文件
+
+  `git rm [-r] --cached <path>`
+
+  > 将文件或目录从缓存去中删除，执行成功后，commit 并 push到远程服务器上，这样当其他人 pull到本地时，本地已经存在的 <path> 路径的文件或目录不会被删除掉，但是会提示为untracked ，未添加到索引区，此时再将文件添加到` .gitignore` ，就可以实现优雅地忽略已存在的文件。
 
