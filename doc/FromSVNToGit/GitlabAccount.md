@@ -6,9 +6,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Git 账号
+## Git 学习资料
 
-GitlabServer:  http://civgit.vicp.net:8880
 
 推荐的两处学习资源
 
