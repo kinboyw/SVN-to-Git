@@ -17,5 +17,3 @@
 
 [Git - 简明学习指南](http://rogerdudler.github.io/git-guide/index.zh.html) 
 
-大家用自己的帐号登录后修改登录密码和关联的邮箱
-Git通过配置的用户名和邮箱来标记每次提交的作者
