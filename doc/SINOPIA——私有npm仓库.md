@@ -81,7 +81,7 @@ yarn init -y # npm init -y
 touch index.js
 ```
 
-引用 *myGreeting*
+引用 *Hello*
 
 ```
 yarn add Hello --dev --registry http://192.168.12.1:4873
