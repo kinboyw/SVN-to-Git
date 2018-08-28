@@ -10,7 +10,7 @@
 docker pull keyvanfatehi/sinopia
 ```
 
-1. 将 *keyvanfatehi/sinopia* 跑起来
+2. 将 *keyvanfatehi/sinopia* 跑起来
 
 ```
 docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia
