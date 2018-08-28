@@ -16,7 +16,7 @@ docker pull keyvanfatehi/sinopia
 docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia
 ```
 
-docker运行在代码服务器上，此时通过 `http://192.168.12.1:4873` 可以访问私有NPM 仓库网页。
+docker运行在代码服务器上，此时通过 http://192.168.12.1:4873 可以访问私有NPM 仓库网页。
 
 ![1535445256928](../imgs/1535445256928.png)
 
