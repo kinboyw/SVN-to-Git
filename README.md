@@ -16,12 +16,16 @@
 - [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md) 
 - [部署环境搭建--面向实施](doc/部署环境搭建--面向实施.md)
 
+## 前端工程化
+
+- [SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
+
 ## 其他文档
 
 - [Nginx 配置文件nginx.conf中文详解](doc/Nginx 配置文件nginx.conf中文详解.md) 
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
 - [常用命令行](doc/常用命令行.md) 
 - [Git 基础](doc/Git 基础.md) 
-- [【前端工程化】SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
+
 
 
