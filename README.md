@@ -27,5 +27,6 @@
 - [常用命令行](doc/常用命令行.md) 
 - [Git 基础](doc/Git 基础.md) 
 
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
 
