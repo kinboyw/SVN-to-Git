@@ -84,7 +84,7 @@ git mergetool
 `LOCAL` - 这个文件来自当前分支；`BASE` - 两个分支的共同祖先，在两个分支上的文件改变之前的样子；`REMOTE` - 要合并到你当前分支的外部分支上的文件；`MERGED` - 合并结果，将会保存到本地`repo`中。
 
 
-我们假设我们希望保留`octodog` 的变化（来自REMOTE）。为此，移动到`MERGED`文件上（Ctrl + w, j）,移动光标到一个合并冲突的区域，然后：
+假设我们希望保留`octodog` 的变化（来自REMOTE）。为此，移动到`MERGED`文件上（Ctrl + w, j）,移动光标到一个合并冲突的区域，然后：
 
 ```
 :diffget RE
