@@ -26,6 +26,7 @@
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
 - [常用命令行](doc/常用命令行.md) 
 - [Git 基础](doc/Git 基础.md) 
+- [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
 
 
 
