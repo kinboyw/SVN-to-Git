@@ -1,4 +1,4 @@
-# Use vimdiff as git mergetool | 使用vimdiff作为git mergetool
+# 使用vimdiff作为git mergetool
 
 translated by 王进波 2018.08.30
 
