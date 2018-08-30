@@ -27,6 +27,7 @@
 - [常用命令行](doc/常用命令行.md) 
 - [Git 基础](doc/Git 基础.md) 
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
+- [用vim写代码](doc/用vim写代码.md)
 
 
 
