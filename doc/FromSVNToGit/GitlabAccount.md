@@ -6,9 +6,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Git 账号
+## Git 学习资料
 
-GitlabServer:  http://civgit.vicp.net:8880
 
 推荐的两处学习资源
 
@@ -18,5 +17,3 @@ GitlabServer:  http://civgit.vicp.net:8880
 
 [Git - 简明学习指南](http://rogerdudler.github.io/git-guide/index.zh.html) 
 
-大家用自己的帐号登录后修改登录密码和关联的邮箱
-Git通过配置的用户名和邮箱来标记每次提交的作者
