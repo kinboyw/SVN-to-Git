@@ -4,7 +4,7 @@ translated by 王进波 2018.08.30
 
 译自：[Use vimdiff as git mergetool](http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/)
 
-使用vimdiff作为`git mergetool`可能有点难以理解，因为它会打开多个窗口，只有极少的说明。本篇是一个简单的练习，介绍`vimdiff`的基本使用方法以及什么是`LOCAL` ,`BASE`,和`REMOTE`。这篇教程默认你至少具备了一点基础的`vim`知识（如何移动光标，保存，窗口切换）。如果你还不具备这些知识，这里有一篇短文可以帮助到你： [Using vim for writing code](http://www.rosipov.com/blog/using-vim-for-writing-code/)。显然，对git和分支的基本理解也是必须的。
+使用vimdiff作为`git mergetool`可能有点难以理解，因为它会打开多个窗口，只有极少的说明。本篇是一个简单的练习，介绍`vimdiff`的基本使用方法以及什么是`LOCAL` ,`BASE`,和`REMOTE`。这篇教程默认你至少具备了一点基础的`vim`知识（如何移动光标，保存，窗口切换）。如果你还不具备这些知识，这里有一篇短文可以帮助到你： [Using vim for writing code](./用vim写代码.md)。显然，对git和分支的基本理解也是必须的。
 
 ##  Git 配置
 
