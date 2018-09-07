@@ -23,18 +23,14 @@
 ## 其他文档
 
 - [Nginx 配置文件nginx.conf中文详解](doc/Nginx 配置文件nginx.conf中文详解.md) 
-
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
-
 - [常用命令行](doc/常用命令行.md) 
-
 - [Git 基础](doc/Git 基础.md) 
-
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
-
 - [用vim写代码](doc/用vim写代码.md)
-
 - [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md)
+- [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md)
+- [CentOS7.4配置网关路由服务器](doc/CentOS7.4配置网关路由服务器.md)
 
 
 
