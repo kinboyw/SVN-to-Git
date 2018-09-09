@@ -1,6 +1,8 @@
 
 
-# CentOS7.4搭建L2TP/IPSec VPN
+# CentOS7.4搭建L2TP/IPSec VPN Client
+
+edited by 王进波 2018.09.07
 
 安装ipsec和l2tp协议工具
 
