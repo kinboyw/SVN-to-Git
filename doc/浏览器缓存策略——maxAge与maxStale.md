@@ -14,15 +14,15 @@ In the following examples, the maximum staleness value (`maxStale`) is used in c
 
 - If the cache policy sets `maxAge` = 5 days and does not specify a `maxStale` value, according to the `maxAge`value, the content is usable until January 6. However, according to the server's revalidation requirements, the content expires on January 4. Because the content expiration date is more conservative (sooner), it takes precedence over the `maxAge` policy. Therefore, the content expires on January 4 and must be revalidated even though its maximum age has not been reached.
 
-- > 如果缓存策略设置`maxAge` = 5 天并且没有指定一个`maxStale` 值，根据`maxAge` 值，该内容在1月6日之前可用。然而根据服务端验证要求，该内容在1月4日过期。因为内容过期日期更为保守（更快），它将优先于`maxAge`策略。因此，即使没有达到最大年龄，该内容也将在1月4日过期，必须被重新验证。
+  > 如果缓存策略设置`maxAge` = 5 天并且没有指定一个`maxStale` 值，根据`maxAge` 值，该内容在1月6日之前可用。然而根据服务端验证要求，该内容在1月4日过期。因为内容过期日期更为保守（更快），它将优先于`maxAge`策略。因此，即使没有达到最大年龄，该内容也将在1月4日过期，必须被重新验证。
 
 - If the cache policy sets `maxAge` = 5 days and `maxStale` = 3 days, according to the `maxAge` value, the content is usable until January 6. According to the `maxStale` value, the content is usable until January 7. Therefore, the content gets revalidated on January 6.
 
-- > 如果缓存策略设置了`maxAge` = 5天，`maxStale` = 3天。根据 `maxAge` 值，该内容在1月6日前可用，根据`maxStale` 值，该内容在1月7日前可用。因此，该内容在1月6日重新验证。
+  > 如果缓存策略设置了`maxAge` = 5天，`maxStale` = 3天。根据 `maxAge` 值，该内容在1月6日前可用，根据`maxStale` 值，该内容在1月7日前可用。因此，该内容在1月6日重新验证。
 
 - If the cache policy sets `maxAge` = 5 days and `maxStale` = 1 day, according to the `maxAge` value, the content is usable until January 6. According to the `maxStale` value, the content is usable until January 5. Therefore, the content gets revalidated on January 5.
 
-- > 如果缓存策略设置`maxAge`值为5天，`maxStale`值为1天，根据`maxAge` 值，内容在1月6日前可用。根据`maxStale`值，内容在1月5日前可用，因此，内容在1月5日会被重新验证。
+  > 如果缓存策略设置`maxAge`值为5天，`maxStale`值为1天，根据`maxAge` 值，内容在1月6日前可用。根据`maxStale`值，内容在1月5日前可用，因此，内容在1月5日会被重新验证。
 
 When the maximum age is less than the content expiration date, the more conservative caching behavior always prevails and the maximum staleness value has no effect. The following examples illustrate the effect of setting a maximum staleness (`maxStale`) value when the maximum age (`maxAge`) is reached before the content expires:
 
@@ -30,12 +30,12 @@ When the maximum age is less than the content expiration date, the more conserva
 
 - If the cache policy sets `maxAge` = 1 day and does not specify a value for `maxStale` value, the content is revalidated on January 2 even though it has not expired.
 
-- > 如果内容缓存策略设置`maxAge`  = 1天并且没有指定`maxStale`值，内容在1月2日重新验证，即使还没过期。
+  > 如果内容缓存策略设置`maxAge`  = 1天并且没有指定`maxStale`值，内容在1月2日重新验证，即使还没过期。
 
 - If the cache policy sets `maxAge` = 1 day and `maxStale` = 3 days, the content is revalidated on January 2 to enforce the more conservative policy setting.
 
-- > 如果缓存策略设置了`maxAge` = 1天，`maxStale` = 3天，内容在1月2日重新验证来强制执行更保守的策略设置。
+  > 如果缓存策略设置了`maxAge` = 1天，`maxStale` = 3天，内容在1月2日重新验证来强制执行更保守的策略设置。
 
 - If the cache policy sets `maxAge` = 1 day and `maxStale` = 1 day, the content is revalidated on January 2.
 
-- > 如果缓存策略设置`maxAge`=1天，`maxStale` = 1天，内容在1月2日重新验证。
+  > 如果缓存策略设置`maxAge`=1天，`maxStale` = 1天，内容在1月2日重新验证。
