@@ -16,9 +16,15 @@
 - [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md) 
 - [部署环境搭建--面向实施](doc/部署环境搭建--面向实施.md)
 
-## 前端工程化
+## 前端
 
 - [SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
+- [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
+
+## Linux
+
+- [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md)
+- [CentOS7.4配置网关路由服务器](doc/CentOS7.4配置网关路由服务器.md)
 
 ## 其他文档
 
@@ -29,8 +35,7 @@
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
 - [用vim写代码](doc/用vim写代码.md)
 - [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md)
-- [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md)
-- [CentOS7.4配置网关路由服务器](doc/CentOS7.4配置网关路由服务器.md)
+
 
 
 
