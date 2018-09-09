@@ -41,6 +41,8 @@
 
 ### 密码管理
 
+Git-Windows配置支持Git多账户
+
 `git config --global credential.useHttpPath true` 
 
 Git 使用Http(s)协议认证时，默认只匹配Url的域名部分，不能匹配到仓库的具体路径。举个例子说，Web4 和 ConfCenter 部署的Url域名部分是相同的，https://civgit.vicp.net:8443，先` Clone`  Web4时，我们输入了Web4 的部署的帐号密码，然后Windows凭据会记住这个Url和对应的帐号密码，然后当` Clone`  ConfCenter的时候，Git会先去Windows凭据中检查是否已经保存过这个Url的帐号密码，因为只保存了Url的域名部分，Web4 的Url域名部分与ConfCenter 是相同的，就会用Web4 的帐号密码来`clone` ConfCenter，就会报错。
