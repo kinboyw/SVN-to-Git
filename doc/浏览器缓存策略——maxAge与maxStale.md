@@ -1,5 +1,9 @@
 # 浏览器缓存策略交互——maxAge 与 maxStale
 
+translated by 王进波 2018.09.09
+
+原文：[Cache Policy Interaction—Maximum Age and Maximum Staleness](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness)
+
 To help ensure that the freshest content is returned to the client application, the interaction of client cache policy and server revalidation requirements always results in the most conservative cache policy. All the examples in this topic illustrate the cache policy for a resource that is cached on January 1 and expires on January 4.
 
 > 为确保客户端应用程序能够被返回最新的内容，客户端缓存策略与服务端验证的交互总是产生最保守的缓存策略。这个话题中的所有示例都是说明一个1月1日被缓存，并在1月4日到期的资源的缓存策略。
