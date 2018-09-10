@@ -169,3 +169,19 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
 ```
 
+
+
+
+
+参考文档
+
+- [Securing L2TP using IPsec](https://tools.ietf.org/html/rfc3193)
+
+- [Streisand](https://github.com/StreisandEffect/streisand/blob/master/README-chs.md)
+
+- [How to Connect to L2TP/IPsec VPN on Linux](https://www.elastichosts.com/blog/linux-l2tpipsec-vpn-client/)
+- [ SECURING VIRTUAL PRIVATE NETWORKS (VPNS) USING LIBRESWAN](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-securing_virtual_private_networks)
+- [[strongSwan] L2TP over strongswan](https://lists.strongswan.org/pipermail/users/2015-April/007964.html)
+- [Linux VPN 客户端](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients-zh.md#linux-vpn-%E5%AE%A2%E6%88%B7%E7%AB%AF)
+- [VPN server for remote clients using IKEv1 with L2TP](https://libreswan.org/wiki/VPN_server_for_remote_clients_using_IKEv1_with_L2TP)
+- [VPN Feature Guide for Security Devices](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/security/security-vpn-ipsec.html)
