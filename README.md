@@ -38,5 +38,16 @@
 
 
 
+## 外部文档
 
+### 微软官方
+
+- [框架设计指南——命名规则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/naming-guidelines)
+
+- [框架设计指南——类型设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/type)
+- [框架设计指南——成员设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/member)
+- [框架设计指南——扩展性设计](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/designing-for-extensibility)
+- [框架设计指南——异常的设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/exceptions)
+- [框架设计指南——使用准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/usage-guidelines)
+- [框架设计指南——常见的设计模式](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/common-design-patterns)
 
