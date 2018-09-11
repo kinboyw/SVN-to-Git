@@ -35,6 +35,7 @@
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
 - [用vim写代码](doc/用vim写代码.md)
 - [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md)
+- [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 
 
 
@@ -43,7 +44,6 @@
 ### 微软官方
 
 - [框架设计指南——命名规则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/naming-guidelines)
-
 - [框架设计指南——类型设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/type)
 - [框架设计指南——成员设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/member)
 - [框架设计指南——扩展性设计](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/designing-for-extensibility)
