@@ -19,6 +19,9 @@
 
 ## 图形界面的Git - SourceTree
 
+
+[安装包](https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git/raw/master/%E5%B7%A5%E5%85%B7/SourceTreeSetup-2.6.10.exe)
+
 ### 先看看SourceTree的界面
 
 #### Local
