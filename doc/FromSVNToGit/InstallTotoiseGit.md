@@ -9,6 +9,10 @@
 
 ## 安装TotoiseGit
 
+下载地址 
+[安装包](https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git/raw/master/%E5%B7%A5%E5%85%B7/TortoiseGit-2.6.0.0-64bit.msi)
+[中文语言包](https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git/raw/master/%E5%B7%A5%E5%85%B7/TortoiseGit-LanguagePack-2.6.0.0-64bit-zh_CN.msi)
+
 ### 配置CRLF 自动转换
 
 > TotoiseGit，是一个绑定右键菜单的图形化界面的 Git 客户端工具， 跟我们熟悉的 TotoiseSVN 界面和操作方式十分相似，不建议对 Git 没有了解的情况下直接上手使用它
