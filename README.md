@@ -20,7 +20,7 @@
 
 - [SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
 - [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
-- [一点点历史——浏览器history](doc/alittlebitofhistory.md)
+- [一点点历史——浏览器history](doc/a little bit of history.md)
 
 ## Linux
 

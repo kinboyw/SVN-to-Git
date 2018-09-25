@@ -267,29 +267,29 @@ http://www.example.com/my-site#/two
 
 While the hash history works well, it can be considered a bit of a hack because of its reliance on the storing all of the path information in the hash of a URL. Therefore, it should only be considered when your website does not have a dynamic server to server your HTML.
 
-虽然 hash history 工作得很好，但是由于它依赖与将所有 location 信息保存在 URL 的 hash 中，因此可以认为这种方法有一点点 hack。所以当你的网站没有动态服务器来服务你的 HTML 时可以考虑这种方法。 
+> 虽然 hash history 工作得很好，但是由于它依赖与将所有 location 信息保存在 URL 的 hash 中，因此可以认为这种方法有一点点 hack。所以当你的网站没有动态服务器来服务你的 HTML 时可以考虑这种方法。 
 
 #### Memory: The Catch-all History
 
 The best thing about memory location is that you can use it anywhere that you can run JavaScript.
 
-关于 memory history 的最好的事情是你能在任何可以运行 JavaScript 的地方使用它。
+> 关于 memory history 的最好的事情是你能在任何可以运行 JavaScript 的地方使用它。
 
 A simple example is that you can use it in unit tests run via Node. That allows you to test code that relies on a history object without having to actually test with a browser.
 
-一个简单的例子是你可以在 Node 中运行的单元测试中使用它。这允许你测试一些依赖 history 对象的代码而不必真的用一个浏览器来测试。
+> 一个简单的例子是你可以在 Node 中运行的单元测试中使用它。这允许你测试一些依赖 history 对象的代码而不必真的用一个浏览器来测试。
 
 More importantly, you can also use a memory history in mobile apps. A memory history is used by `react-router-native` to enable location based navigation in `react-native` apps.
 
-更重要的是，你也可以在移动端 app 中使用它。memory history 被`react-router-native` 用于允许在`react-native`app中使用基于 location 的导航。
+> 更重要的是，你也可以在移动端 app 中使用它。memory history 被`react-router-native` 用于允许在`react-native`app中使用基于 location 的导航。
 
 If you really wanted, you could even use a memory history in the browser (although you would be losing the integration with the address bar).
 
-如果你真的想，你甚至可以在浏览器中使用 memory history（但是你会失去与地址栏的集成）。
+> 如果你真的想，你甚至可以在浏览器中使用 memory history（但是你会失去与地址栏的集成）。
 
 The biggest difference between the memory history and the browser and hash histories is that it maintains its own in-memory array of locations. When creating a memory history you can pass information to setup the initial state. This state would be an array of locations and the index of the “current” location in that array [5]. This is different from the browser and hash histories, which rely on the browser to already be storing the array of locations.
 
-memory history 与 browser 和 hash history最大的不同在于它在内存中维护了自己而 location 数组。当创建一个 memory history 的时候你可以传递来设置初始状态。这个状态将是一个 location 数组和这个数组中的 “current” location 的索引[5]。这与 browser 和 hash history不同，后两个依赖于浏览器已经存储了 location 数组。
+> memory history 与 browser 和 hash history最大的不同在于它在内存中维护了自己而 location 数组。当创建一个 memory history 的时候你可以传递来设置初始状态。这个状态将是一个 location 数组和这个数组中的 “current” location 的索引[5]。这与 browser 和 hash history不同，后两个依赖于浏览器已经存储了 location 数组。
 
 ```
 const history = createMemoryHistory({
