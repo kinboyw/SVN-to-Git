@@ -6,7 +6,7 @@ translated by 王进波 2018.09.25
 
 If you wish to understand React Router, you must first study history. More specifically, the [history](https://github.com/ReactTraining/history) package, which provides the core functionality for React Router. It enables projects to easily add location based navigation on the client-side, which is essential for single page applications.
 
-> 如果你想要理解 React Router，那你必须先学习 history。具体来说，是[history](https://github.com/ReactTraining/history)包，它提供了 React Router 的核心功能。它允许项目轻松的在客户端添加基于位置(location)的导航，这对但页面应用来说是至关重要的。
+> 如果你想要理解 React Router，那你必须先学习 history。具体来说，是[history](https://github.com/ReactTraining/history)包，它提供了 React Router 的核心功能。它允许项目轻松的在客户端添加基于位置(location)的导航，这对单页面应用来说是至关重要的。
 
 ```
 npm install --save history
