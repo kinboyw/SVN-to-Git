@@ -197,7 +197,7 @@ That covers the essential history API. There are a couple more properties and me
 
 There are some differences between the history types that you will need to consider when deciding which is best suited for your project. Between the three of them, any use case should be covered.
 
-> 在决定哪种类型最适合你的项目时，有一些 history 类型之间的差异你需要考虑。在这三者之间，应该覆盖任何用例。
+> 在决定哪种类型最适合你的项目时，有一些 history 类型之间的差异你需要考虑。这三种类型，应该能够覆盖任何用例。
 
 #### In the Browser
 
