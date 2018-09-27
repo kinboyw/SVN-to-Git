@@ -61,13 +61,13 @@ public class LoggingJob : IJob
 			Console.WriteLine($"数据查询错误！code：{code},msg：{msg}");
 			return;
 		}
-		
+
 		CreateProcedures();
 
 		var effectiveData = SensorData.Where(o => o.TempTime != null);
 		var effectiveData1 = GetSensorIDs(effectiveData);
 		var effectiveData2 = GetBaseID(effectiveData);
-		
+
 		InsertSensorDataAsync(effectiveData1);
 		InsertPumpDataAsync(effectiveData2);
 		return;
@@ -76,23 +76,31 @@ public class LoggingJob : IJob
 
 	private IEnumerable<Data> GetBaseID(IEnumerable<Data> effectiveData)
 	{
+		var sql = $@"
+		select jz.id BaseID ,pa.ID ParamID,p.pcode from Pump p 
+		inner join PumpJZ jz on p.id = jz.PumpId
+		left join PumpAlarmParam pa on jz.id = pa.pumpJZID";
+		var db = new RobotDBHelper(dbType, connString);
+		var tmp = db.ExecuteDataSet(sql, out var err);
+		if (!string.IsNullOrEmpty(err))
+		{
+			Console.WriteLine($"数据查询出错！err：{err}");
+			return null;
+		}
+		var rows = tmp.Tables[0].Rows.Cast<DataRow>();
 		Parallel.ForEach(effectiveData, item =>
 		{
-			var sql = $@"
-		select jz.id BaseID from Pump p 
-		inner join PumpJZ jz on p.id = jz.PumpId
-		where p.pcode = '{item.ID}'";
-			var db = new RobotDBHelper(dbType, connString);
-			var tmp = db.ExecuteDataSet(sql, out var err);
-			if (!string.IsNullOrEmpty(err))
-			{
-				Console.WriteLine($"数据查询出错！err：{err}");
-				return;
-			}
 			if (tmp != null && tmp.Tables.Count > 0 && tmp.Tables[0].Rows != null)
 			{
-				var rows = tmp.Tables[0].Rows;
-				item.BaseID = rows[0]["BaseID"].ToString();
+
+				var row = rows.Where(o => o["pcode"].ToString() == item.ID.ToUpper())?.Distinct()?.FirstOrDefault() ?? null;
+				if (row == null)
+				{
+					Console.WriteLine($"pump表中查不到对应的pcode！ID:{item.ID}");
+					return;
+				}
+				item.BaseID = row["BaseID"].ToString();
+				item.ParamID = row["ParamID"].ToString();
 			}
 		});
 		return effectiveData;
@@ -100,35 +108,42 @@ public class LoggingJob : IJob
 
 	private IEnumerable<Data> GetSensorIDs(IEnumerable<Data> effectiveData)
 	{
+		var sql = $@"
+		select se.id,se.name,right(se.code,1) code,StationNo from SCADA_Station st 
+		left join SCADA_Sensor se 
+		on st.id = se.StationID ";
+		var db = new RobotDBHelper(dbType, connString);
+		var tmp = db.ExecuteDataSet(sql, out var err);
+		if (!string.IsNullOrEmpty(err))
+		{
+			Console.WriteLine($"数据查询出错！err：{err}");
+			return null;
+		}
+		var rowss = tmp.Tables[0].Rows.Cast<DataRow>();
 		Parallel.ForEach(effectiveData, item =>
 		{
-			var sql = $@"
-		select se.id,se.name from SCADA_Station st 
-		left join SCADA_Sensor se 
-		on st.id = se.StationID 
-		where st.StationNo = '{item.ID}'";
-			var db = new RobotDBHelper(dbType, connString);
-			var tmp = db.ExecuteDataSet(sql, out var err);
-			if (!string.IsNullOrEmpty(err))
-			{
-				Console.WriteLine($"数据查询出错！err：{err}");
-				return;
-			}
 			if (tmp != null && tmp.Tables.Count > 0 && tmp.Tables[0].Rows != null)
 			{
-				var rows = tmp.Tables[0].Rows;
+				var rows = rowss.Where(o => o["StationNo"].ToString() == item.ID.ToUpper())?.Distinct() ?? null;
+				if (rows == null)
+				{
+					Console.WriteLine($"Station表中查不到对应的StationNo！ID：{item.ID}");
+					return;
+				}
+
 				foreach (DataRow row in rows)
 				{
-					var Name = row["Name"].ToString();
+					//var Name = row["Name"].ToString();
+					var Code = row["code"].ToString();
 					var ID = row["ID"].ToString();
 
-					switch (Name)
+					switch (Code)
 					{
-						case "进水压力":
-							item.InID = ID; break;
-						case "出水压力":
+						case "1"://"出水压力":
 							item.OutID = ID; break;
-						case "状态":
+						case "2"://"进水压力":
+							item.InID = ID; break;
+						case "3"://"状态":
 							item.StatusID = ID; break;
 						default: break;
 					}
@@ -151,6 +166,7 @@ public class LoggingJob : IJob
 					return;
 				}
 				var tname_pumphis = "PumpHisData";
+				var tname_pumpalarm = "PumpAlarmHistory";
 				var pname_pumpreal = "MergePumpRealData";
 				var pname_pumpalarm = "MergePumpAlarmTimely";
 
@@ -160,7 +176,8 @@ public class LoggingJob : IJob
 			};
 				if (item.FOnline == 0)
 				{
-					sqls.Add($@"EXECUTE {pname_pumpalarm} '{item.BaseID}',36,'设备离线','{item.TempTime}'");
+					sqls.Add($@"EXECUTE {pname_pumpalarm} '{item.BaseID}',{item.ParamID},'设备离线','{item.TempTime}'");
+					sqls.Add($@"insert into {tname_pumpalarm} (PumpJZID,ParamID,Tips,FBeginAlarmTime) values ('{item.BaseID}',{item.ParamID},'设备离线','{item.TempTime}')");
 				}
 				foreach (var sql in sqls)
 				{
@@ -273,6 +290,7 @@ public class LoggingJob : IJob
 		public string OutID { get; set; }
 		public string StatusID { get; set; }
 		public string BaseID { get; set; }
+		public string ParamID { get; set; }
 	}
 	public class Response
 	{
@@ -357,7 +375,7 @@ public class LoggingJob : IJob
 			var proc3 = "MergePumpAlarmTimely";
 			if (!names.Contains(proc1))
 			{
-				Console.WriteLine($"创建存储过程{proc1}{Environment.NewLine}{sql_MergeSCADA_SensorRealTime}")
+				Console.WriteLine($"创建存储过程{proc1}{Environment.NewLine}{sql_MergeSCADA_SensorRealTime}");
 				db.ExecuteNonQuery(sql_MergeSCADA_SensorRealTime, out err);
 				if (!string.IsNullOrEmpty(err))
 				{
@@ -372,7 +390,7 @@ public class LoggingJob : IJob
 
 			if (!names.Contains(proc2))
 			{
-				Console.WriteLine($"创建存储过程{proc2}{Environment.NewLine}{sql_MergePumpRealData}")
+				Console.WriteLine($"创建存储过程{proc2}{Environment.NewLine}{sql_MergePumpRealData}");
 				db.ExecuteNonQuery(sql_MergePumpRealData, out err);
 				if (!string.IsNullOrEmpty(err))
 				{
@@ -387,7 +405,7 @@ public class LoggingJob : IJob
 
 			if (!names.Contains(proc3))
 			{
-				Console.WriteLine($"创建存储过程{proc3}{Environment.NewLine}{sql_MergePumpAlarmTimely}")
+				Console.WriteLine($"创建存储过程{proc3}{Environment.NewLine}{sql_MergePumpAlarmTimely}");
 				db.ExecuteNonQuery(sql_MergePumpAlarmTimely, out err);
 				if (!string.IsNullOrEmpty(err))
 				{
