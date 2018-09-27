@@ -429,8 +429,7 @@ public class LoggingJob : IJob
 	begin
 	insert into SCADA_SensorRealTime(SensorID,LastValue,LastTime)values(@SensorID,@LastValue,@LastTime)
 	end
-	end
-	go	";
+	end";
 	const string sql_MergePumpRealData = @"
 	create procedure dbo.MergePumpRealData @BaseID nvarchar(20),@FOnline int, @F40009 float, @F40014 float, @LastTime datetime
 	as
@@ -441,8 +440,7 @@ public class LoggingJob : IJob
 	begin
 	insert into PumpRealData(BASEID,FOnLine,f40009,F40014,FUpdateDate,TempTime)values(@BaseID,@FOnline,@f40009,@F40014,@LastTime,@LastTime)
 	end
-	end
-	go	";
+	end";
 	const string sql_MergePumpAlarmTimely = @"
 	create procedure dbo.MergePumpAlarmTimely @pumpJZID nvarchar(20),@ParamID int, @Tips nvarchar(50), @LastTime datetime
 	as
@@ -451,11 +449,9 @@ public class LoggingJob : IJob
 	update PumpAlarmTimely set BeginAlarmTime = @LastTime, ParamID = @ParamID, Tips = @Tips where PumpJZID = @pumpJZID
 	if(@@ROWCOUNT=0)
 	begin
-	insert into PumpAlarmTimely(PumpJZID,BeginAlarmTime,ParamID,Tips)values(@pumpJZID,@LastTime,@ParamID,@Tips)
+	insert into PumpAlarmTimely(PumpJZID,BeginAlarmTime,ParamID,Tips,AlarmOrWarn)values(@pumpJZID,@LastTime,@ParamID,@Tips,1)
 	end
-	end
-	go	";
+	end";
 }
-
 ```
 
