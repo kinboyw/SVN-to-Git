@@ -60,7 +60,7 @@ Finally, a location can have `state` associated with it. This provides a means o
 
 When a history object is created, it will need an initial location. How this is determined is different for each type of history. For example, the browser history will parse the current URL.
 
-> 当一个 history 对象被创建，它就会需要一个初始的 location。在各种类型的 history 中，如何确定这个初始位置是不同的。例如，`browser history`会将当前的URL转换未初始 location。
+> 当一个 history 对象被创建，它就会需要一个初始的 location。在各种类型的 history 中，如何确定这个初始位置是不同的。例如，`browser history`会将当前的URL转换为当前 location。
 
 #### One location to rule them all? 
 
