@@ -43,6 +43,7 @@
 - [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md)
 - [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 - [ike-scan扫描服务端的ike加密算法](doc/ike-scan扫描服务端的ike加密算法.md)
+- [用LinqPad 快速开发C#代码](doc/LinqPad快速开发数据轮询持久化.md)
 
 
 
