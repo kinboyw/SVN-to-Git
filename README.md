@@ -44,6 +44,7 @@
 - [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 - [ike-scan扫描服务端的ike加密算法](doc/ike-scan扫描服务端的ike加密算法.md)
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
+- [用Quartz.net开发定时调度]
 
 
 
