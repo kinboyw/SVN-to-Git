@@ -22,6 +22,7 @@
 - [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
 - [一点点历史——浏览器history](doc/a-little-bit-of-history.md)
 - [Simple-Page Applications And Server——单页面应用程序与服务器](doc/Simple-Page Applications And Server.md) 
+- [npm package.json中的`~`与`^`有什么不同](doc/difference-between-tilde-and-caret-in-npm-package.json-file.md)
 - ...[EcmaScript 6 ]()
 - ...[TypeScript]()
 - ...[WebPack 编译与打包]()
