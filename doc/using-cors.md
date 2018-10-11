@@ -1,12 +1,7 @@
 # Using CORS
 
-- By** [Monsur Hossain](https://www.html5rocks.com/profiles/#monsurhossain)
 
-  **Published:** October 26th, 2011**Updated:** October 29th, 2013**Comments:** [19](https://www.html5rocks.com/en/tutorials/cors/#disqus_thread)
-
-
-
-  ## Introduction
+## Introduction
 
   APIs are the threads that let you stitch together a rich web experience. But this experience has a hard time translating to the browser, where the options for cross-domain requests are limited to techniques like [JSON-P](http://en.wikipedia.org/wiki/JSONP)(which has limited use due to security concerns) or setting up a custom proxy (which can be a pain to set up and maintain).
 
@@ -16,11 +11,11 @@
 
   As you can see from this example, CORS support requires coordination between both the server and client. Luckily, if you are a client-side developer you are shielded from most of these details. The rest of this article shows how clients can make cross-origin requests, and how servers can configure themselves to support CORS.
 
-  ## Making a CORS Request
+## Making a CORS Request
 
   This section shows how to make a cross-domain request in JavaScript.
 
-  ### Creating the XMLHttpRequest object
+### Creating the XMLHttpRequest object
 
   CORS is supported in the following browsers:
 
@@ -32,11 +27,7 @@
   - Safari 4+
   - Internet Explorer 8+
 
-  (see the complete list of supported browsers at 
-
-  http://caniuse.com/#search=cors
-
-  )
+  (see the complete list of supported browsers at   http://caniuse.com/#search=cors  )
 
 
 
@@ -75,19 +66,19 @@
   }
   ```
 
-  ### Event handlers
+### Event handlers
 
   The original XMLHttpRequest object had only one event handler, `onreadystatechange`, which handled all responses. Although `onreadystatechange` is still available, XMLHttpRequest2 introduces a bunch of new event handlers. Here is a complete list:
 
-  | Event Handler | Description                                                  |
-  | ------------- | ------------------------------------------------------------ |
-  | onloadstart*  | When the request starts.                                     |
-  | onprogress    | While loading and sending data.                              |
-  | onabort*      | When the request has been aborted. For instance, by invoking the abort() method. |
-  | onerror       | When the request has failed.                                 |
-  | onload        | When the request has successfully completed.                 |
-  | ontimeout     | When the author specified timeout has passed before the request could complete. |
-  | onloadend*    | When the request has completed (either in success or failure). |
+| Event Handler | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| onloadstart*  | When the request starts.                                     |
+| onprogress    | While loading and sending data.                              |
+| onabort*      | When the request has been aborted. For instance, by invoking the abort() method. |
+| onerror       | When the request has failed.                                 |
+| onload        | When the request has successfully completed.                 |
+| ontimeout     | When the author specified timeout has passed before the request could complete. |
+| onloadend*    | When the request has completed (either in success or failure). |
 
   \* starred items are not supported by IE's XDomainRequest
   source: <http://www.w3.org/TR/XMLHttpRequest2/#events>
@@ -108,7 +99,7 @@
 
   Browers don't do a good job of reporting what went wrong when there is an error. For example, Firefox reports a status of 0 and an empty statusText for all errors. Browsers also report an error message to the console log, but this message cannot be accessed from JavaScript. When handling `onerror`, you will know that an error occurred, but not much else.
 
-  ### withCredentials
+### withCredentials
 
   Standard CORS requests do not send or set any cookies by default. In order to include cookies as part of the request, you need to set the XMLHttpRequest’s `.withCredentials` property to true:
 
@@ -124,7 +115,7 @@
 
   The `.withCredentials` property will include any cookies from the remote domain in the request, and it will also set any cookies from the remote domain. Note that these cookies still honor same-origin policies, so your JavaScript code can’t access the cookies from document.cookie or the response headers. They can only be controlled by the remote domain.
 
-  ### Making the request
+### Making the request
 
   Now that your CORS request is configured, you are ready to make the request. This is done by calling the `send()` method:
 
@@ -136,7 +127,7 @@
 
   And thats it! Assuming the server is properly configured to respond to CORS requests, your `onload` handler will fire with the response, just like the standard same-domain XHR you are so familiar with.
 
-  ### End-to-End Example
+### End-to-End Example
 
   Here is a full working sample of a CORS request. Run the sample and watch the network requests in the browser's debugger to see the actual request being made.
 
@@ -191,7 +182,7 @@
   }
   ```
 
-  ## Adding CORS support to the server
+## Adding CORS support to the server
 
   Most of the heavy lifting for CORS is handled between the browser and the server. The browser adds some additional headers, and sometimes makes additional requests, during a CORS request on behalf of the client. These additions are hidden from the client (but can be discovered using a packet analyzer such as [Wireshark](http://www.wireshark.org/)).
 
@@ -199,7 +190,7 @@
 
   Browser manufacturers are responsible for the browser-side implementation. This section explains how a server can configure its headers to support CORS.
 
-  ### Types of CORS requests
+### Types of CORS requests
 
   Cross-origin requests come in two flavors:
 
@@ -232,7 +223,7 @@
 
   Any request that does not meet the criteria above is a not-so-simple request, and requires a little extra communication between the browser and the server (called a preflight request), which we’ll get into below.
 
-  ### Handling a simple request
+### Handling a simple request
 
   Lets start by examining a simple request from the client. The table below shows the JavaScript code for a simple GET request on the left, along with the actual HTTP request that the browser emits; CORS specific headers are in bold.
 
@@ -303,7 +294,7 @@
 
   If you want clients to be able to access other headers, you have to use the `Access-Control-Expose-Headers` header. The value of this header is a comma-delimited list of response headers you want to expose to the client.
 
-  ### Handling a not-so-simple request
+### Handling a not-so-simple request
 
   So that takes care of a simple GET request, but what if you want to do something more? Maybe you want to support other HTTP verbs like PUT or DELETE, or you want to support JSON using Content-Type: application/json. Then you need to handle what we’re calling a not-so-simple request.
 
@@ -427,11 +418,11 @@
 
   The browser doesn't give you a lot of details on why the error occurred, it only tells you that something went wrong.
 
-  ### A word about security
+### A word about security
 
   While CORS lays the groundwork for making cross-domain requests, the CORS headers are not a substitute for sound security practices. You shouldn't rely on the CORS header for securing resources on your site. Use the CORS headers to give the browser directions on cross-domain access, but use some other security mechanism, such as cookies or [OAuth2](http://oauth.net/2/), if you need additional security restrictions on your content.
 
-  ## CORS from JQuery
+## CORS from JQuery
 
   JQuery's `$.ajax()` method can be used to make both regular XHR and CORS requests. A few notes about JQuery's implementation:
 
@@ -486,7 +477,7 @@
   });
   ```
 
-  ## Cross-Domain from Chrome Extensions
+## Cross-Domain from Chrome Extensions
 
   Chrome extensions support cross-domain requests in a two different ways:
 
@@ -502,7 +493,7 @@
 
 
 
-  ## Known Issues
+## Known Issues
 
   CORS support is still being actively developed in all browsers; here's a list of known issues (as of 10/2/2013):
 
@@ -511,17 +502,17 @@
 
 
 
-  ## CORS Server Flowchart
+## CORS Server Flowchart
 
   The flowchart below shows how a server should make the decisions as to which headers to add to a CORS response. Click the image to see a larger version.
 
   [![img](https://www.html5rocks.com/static/images/cors_server_flowchart.png)](https://www.html5rocks.com/static/images/cors_server_flowchart.png)CORS Server Flowchart
 
-  ## CORS w/ Images
+## CORS w/ Images
 
   In Canvas and WebGL contexts, cross origin images can pose big problems. You can use the crossOrigin attribute on the image element to address much of them. Read [Chromium Blog: Using Cross-domain images in WebGL](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)and [Mozilla Hacks: Using CORS to load WebGL textures from cross-domain images](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for the details. Implementation specifics can be found at the MDN page for [CORS-enabled Image](https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image).
 
-  ## Resources
+## Resources
 
   Here are some resources if you'd like to learn more about CORS:
 
