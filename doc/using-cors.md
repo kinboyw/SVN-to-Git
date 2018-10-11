@@ -35,7 +35,7 @@
 
   To get started, you will first need to create the appropriate request object. Nicholas Zakas wrote [a simple helper method](http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/) to help sort out the browser differences:
 
-  ```
+  ```javascript
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
@@ -85,7 +85,7 @@
 
   For most cases, you will at the very least want to handle the `onload` and `onerror` events:
 
-  ```
+  ```javascript
   xhr.onload = function() {
    var responseText = xhr.responseText;
    console.log(responseText);
@@ -103,13 +103,13 @@
 
   Standard CORS requests do not send or set any cookies by default. In order to include cookies as part of the request, you need to set the XMLHttpRequest’s `.withCredentials` property to true:
 
-  ```
+  ```javascript
   xhr.withCredentials = true;
   ```
 
   In order for this to work, the server must also enable credentials by setting the Access-Control-Allow-Credentials response header to “true”. See the [server section](https://www.html5rocks.com/en/tutorials/cors/#toc-adding-cors-support-to-the-server) for details.
 
-  ```
+  ```http
   Access-Control-Allow-Credentials: true
   ```
 
@@ -119,7 +119,7 @@
 
   Now that your CORS request is configured, you are ready to make the request. This is done by calling the `send()` method:
 
-  ```
+  ```javascript
   xhr.send();
   ```
 
@@ -133,7 +133,7 @@
 
   [Run Sample](https://www.html5rocks.com/en/tutorials/cors/#)
 
-  ```
+  ```javascript
   // Create the XHR object.
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
@@ -229,7 +229,7 @@
 
   JavaScript:
 
-  ```
+  ```javascript
   var url = 'http://api.alice.com/cors';
   var xhr = createCORSRequest('GET', url);
   xhr.send();
@@ -237,7 +237,7 @@
 
   HTTP Request:
 
-  ```
+  ```http
   GET /cors HTTP/1.1
   Origin: http://api.bob.com
   Host: api.alice.com
@@ -252,7 +252,7 @@
 
   HTTP Request:
 
-  ```
+  ```javascript
   POST /cors HTTP/1.1
   Origin: http://api.bob.com
   Host: api.bob.com
@@ -264,7 +264,7 @@
 
   HTTP Response:
 
-  ```
+  ```http
   Access-Control-Allow-Origin: http://api.bob.com
   Access-Control-Allow-Credentials: true
   Access-Control-Expose-Headers: FooBar
@@ -304,7 +304,7 @@
 
   JavaScript:
 
-  ```
+  ```javascript
   var url = 'http://api.alice.com/cors';
   var xhr = createCORSRequest('PUT', url);
   xhr.setRequestHeader(
@@ -314,7 +314,7 @@
 
   Preflight Request:
 
-  ```
+  ```http
   OPTIONS /cors HTTP/1.1
   Origin: http://api.bob.com
   Access-Control-Request-Method: PUT
@@ -337,7 +337,7 @@
 
   Preflight Request:
 
-  ```
+  ```http
   OPTIONS /cors HTTP/1.1
   Origin: http://api.bob.com
   Access-Control-Request-Method: PUT
@@ -350,7 +350,7 @@
 
   Preflight Response:
 
-  ```
+  ```http
   Access-Control-Allow-Origin: http://api.bob.com
   Access-Control-Allow-Methods: GET, POST, PUT
   Access-Control-Allow-Headers: X-Custom-Header
@@ -371,7 +371,7 @@
 
   Actual Request:
 
-  ```
+  ```http
   PUT /cors HTTP/1.1
   Origin: http://api.bob.com
   Host: api.alice.com
@@ -383,7 +383,7 @@
 
   Actual Response:
 
-  ```
+  ```http
   Access-Control-Allow-Origin: http://api.bob.com
   Content-Type: text/html; charset=utf-8
   ```
@@ -392,7 +392,7 @@
 
   Preflight Request:
 
-  ```
+  ```http
   OPTIONS /cors HTTP/1.1
   Origin: http://api.bob.com
   Access-Control-Request-Method: PUT
@@ -405,14 +405,14 @@
 
   Preflight Response:
 
-  ```
+  ```http
   // ERROR - No CORS headers, this is an invalid request!
   Content-Type: text/html; charset=utf-8
   ```
 
   If there is an error in the CORS request, the browser will fire the client's `onerror` event handler. It will also print the following error to the console log:
 
-  ```
+  ```http
   XMLHttpRequest cannot load http://api.alice.com. Origin http://api.bob.com is not allowed by Access-Control-Allow-Origin.
   ```
 
@@ -431,7 +431,7 @@
 
   Here's sample code for making a CORS request with JQuery. The comments give more details on how certain properties interact with CORS.
 
-  ```
+  ```javascript
   $.ajax({
   
     // The 'type' property sets the HTTP method.
@@ -483,7 +483,7 @@
 
   1. Include domain in manifest.json - Chrome extensions can make cross-domain requests to any domain *if* the domain is included in the "permissions" section of the manifest.json file:
 
-     ```
+     ```javascript
      "permissions": [ "http://*.html5rocks.com"]
      ```
 
