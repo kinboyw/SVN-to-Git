@@ -22,6 +22,7 @@
 - [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
 - [一点点历史——浏览器history](doc/a-little-bit-of-history.md)
 - [Simple-Page Applications And Server——单页面应用程序与服务器](doc/Simple-Page Applications And Server.md) 
+- [npm package.json中的`~`与`^`有什么不同](doc/difference-between-tilde-and-caret-in-npm-package.json-file.md)
 - [使用跨域——Using CORS](doc/using-cors.md)
 - ...[EcmaScript 6 ]()
 - ...[TypeScript]()
@@ -45,10 +46,11 @@
 - [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 - [ike-scan扫描服务端的ike加密算法](doc/ike-scan扫描服务端的ike加密算法.md)
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
+- [用Quartz.net开发定时调度]
 
 
 
-## 外部文档
+## 外部文档 
 
 ### 微软官方
 
