@@ -17,7 +17,7 @@ LinqPad 编写的代码文件后缀是 `.linq` ，既可以在 LinqPad 编辑器
 
 上海青浦 Scada 数据接口轮询持久化服务代码备份，在LinqPad中运行。
 
-```C#
+```csharp
 void Main()
 {
 	// construct a scheduler factory
@@ -454,3 +454,4 @@ public class LoggingJob : IJob
 	end";
 }
 ```
+
