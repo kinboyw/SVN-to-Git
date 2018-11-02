@@ -43,13 +43,13 @@ git remote add origin https://example.com/group/somerepo.git #这一步添加新
 
 
 
+### 内网下速度优化的建议
+
+​	内网环境下 `clone` 代码时，如果使用 `gitlab.wohitech.com` 域名，则会通过外网的阿里云服务器代理，速度比较慢，这时我们可以手动修改仓库的 URL ，例如 使用 `HTTPS` 时，将 `https://gitlab.wohitech.com/group/reponame.git` 改成 `https://civgit.vicp.net:8443/wangjinbo/Svn-to-Git.git` ，使用 `SSH` 时将 `git@gitlab.wohitech.com:wangjinbo/Svn-to-Git.git` 改为 `git@civgit.vicp.net:8822/wangjinbo/Svn-to-Git.git`，这样可以强制走内网，下载速度可能达到 **30 ~ 50 Mbps** 
 
 
 
-
-https://www.scalescale.com/tips/nginx/optimizing-nginx-for-serving-files-bigger-than-1gb/
-
-
+使用阿里云反代后出现大仓库 `clone` 失败的问题，出错如下：
 
 ```shell
 Administrator@WIN-T322BR19JV7 MINGW64 /d/00GitSation
@@ -61,4 +61,6 @@ fatal: The remote end hung up unexpectedly3.89 MiB | 600.00 KiB/s
 fatal: early EOF
 fatal: index-pack failed
 ```
+
+查找资料，是 Nginx 设置问题，参照 [这里](https://www.scalescale.com/tips/nginx/optimizing-nginx-for-serving-files-bigger-than-1gb/) 的解决办法，解决问题
 
