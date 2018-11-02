@@ -15,6 +15,7 @@
 - [关于ConfCenter和Web4移出服务代码的更新](doc/对于ConfCenter和Web4移出服务代码的更新.md) 
 - [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md) 
 - [部署环境搭建--面向实施](doc/部署环境搭建--面向实施.md)
+- [关于Gitlab域名更换问题](./doc/关于Gitlab域名更换问题.md)
 
 ## 前端
 
