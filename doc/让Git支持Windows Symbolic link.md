@@ -61,4 +61,14 @@ mklink /d this-link-points-to c:\that-directory 	#创建目录类型的symbolic 
 mklink this-link-points-to c:\that-file		#创建文件类型的symbolic link
 ```
 
+补充：
+
 因为执行`mklink`需要管理员权限，所以在Windows命令行中执行`mklink`时需要用管理员权限启动命令行工具。
+
+如果希望创建的符号链接通过相对路径指向目标文件或文件夹，则相对路径中的分隔符要用反斜杠 `\` 。上面的示例就要写成这样，创面符号链接，指向父级目录中的目标对象：
+
+``` 
+mklink /d this-link-points-to ..\that-directory 	#创建目录类型的symbolic link
+mklink this-link-points-to ..\that-file		#创建文件类型的symbolic link
+```
+
