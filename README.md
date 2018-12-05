@@ -25,6 +25,7 @@
 - [Simple-Page Applications And Server——单页面应用程序与服务器](doc/Simple-Page Applications And Server.md) 
 - [npm package.json中的`~`与`^`有什么不同](doc/difference-between-tilde-and-caret-in-npm-package.json-file.md)
 - [使用跨域——Using CORS](doc/using-cors.md)
+- [如何使用SSH协议获取gitlab仓库代码](./doc/如何使用ssh协议获取gitlab仓库的代码.md) 
 - ...[EcmaScript 6 ]()
 - ...[TypeScript]()
 - ...[WebPack 编译与打包]()
