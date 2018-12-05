@@ -25,11 +25,13 @@ gitlab 中有两个地方可以使用 SSH ：
 - 登录或远程登录部署环境的服务器（只考虑 Windows 服务器）
 - 安装 Git-windows 客户端，安装过程在[这里](https://gitlab.wohitech.com/wangjinbo/Svn-to-Git/blob/master/doc/FromSVNToGit/InstallGitWindows.md)。 （如果命令行中可以执行 git 命令，则跳过此步骤）
 - 打开 Git-Bash 命令行，是 Git-Bash 命令行，不是 Windows Command Line，也不是 PowerShell。
-- 执行命令 `SSH-keygen`， 然后一路回车，不用输入任何参数，最后会得到一副气泡图一样的矩形图像，就生成成功了
+- 执行命令 `ssh-keygen`， 然后一路回车，不用输入任何参数，最后会得到一副气泡图一样的矩形图像，就生成成功了
 
 ### 如何使用 SSH 密钥
 
-- 执行命令 `cat .SSH/id_rsa.pub` ，会得到很长的一串字符串，这就是公钥，选中并复制
+- 命令行导航到用户家目录下，操作为执行命令 `cd` 
+
+- 执行命令 `cat .ssh/id_rsa.pub` ，会得到很长的一串字符串，这就是公钥，选中并复制
 - 实施拿到公钥后需要找研发或者实施有 gitlab.wohitech.com 帐号的同事，将公钥配置到仓库的 Deploy key 里面去。
 
 在 gitlab.wohitech.com 中添加 Deploy key 后，就可以直接 clone 代码了，不需要像 HTTP 协议那样输入部署口令，命令行会自动使用你刚刚生成的 SSH 私钥去向 git 服务器发起请求，然后就开始下载了。
