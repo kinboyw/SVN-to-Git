@@ -35,6 +35,7 @@
 - [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md)
 - [CentOS7.4配置网关路由服务器](doc/CentOS7.4配置网关路由服务器.md)
 - [解決Linux內核升級导致vmmon模块加载失败的问题](./doc/解決Linux內核升級导致vmmon模块加载失败的问题.md) 
+- [如何在ArchLinux上安装自签名SSL证书](./doc/如何在ArchLinux上安装自签名SSL证书.md) 
 - ...[Linux Shell 脚本]()
 
 ## 其他文档
