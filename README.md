@@ -53,6 +53,7 @@
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
 - [用Quartz.net开发定时调度]
 - [创建交互式Windows任务计划](./doc/创建交互式Windows任务计划.md) 
+- [用Certbot部署Let‘sEncrypt的HTTPS证书](./doc/用Certbot部署Let'sEncrypt的HTTPS证书.md) 
 
 ## 外部文档 
 
