@@ -114,9 +114,9 @@ Before continuing, verify the record is deployed.
 Press Enter to Continue
 Waiting for verification...
 Cleaning up challenges
-[1m
+[1m
 IMPORTANT NOTES:
-[0m - Congratulations! Your certificate and chain have been saved at:
+[0m - Congratulations! Your certificate and chain have been saved at:
    C:\Certbot\live\haian.wohitech.com\fullchain.pem
    Your key file has been saved at:
    C:\Certbot\live\haian.wohitech.com\privkey.pem
