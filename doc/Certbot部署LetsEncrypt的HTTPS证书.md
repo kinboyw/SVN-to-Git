@@ -1,4 +1,4 @@
-# 用 Certbot 部署 Let's Encrypt 的 HTTPS 证书
+# 用Certbot部署LetsEncrypt的HTTPS证书
 
 这个操作在 Linux 下很方便，一行命令就可以搞定，Windows 上还是折腾了一番，找了很多文档都对不上我的需求，最后在[官方文档](https://certbot.eff.org/docs/using.html#manual)这里得到了答案。简述过程如下：
 
@@ -9,7 +9,7 @@
 ### 安装 Certbot
 
 ```shell
-
+pip install certbot
 ```
 
 ### 开始生成证书
@@ -69,13 +69,32 @@ Press Enter to Continue
 配置完成后用 Linux 命令行验证配置成功
 
 ```shell
-
+dig -t txt _acme-challenge.haian.wohitech.com
 ```
 
 结果如下
 
 ```shell
+kinboy@DESKTOP-HPEE23P:~$ dig -t txt _acme-challenge.haian.wohitech.com
 
+; <<>> DiG 9.11.3-1ubuntu1-Ubuntu <<>> -t txt _acme-challenge.haian.wohitech.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59734
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;_acme-challenge.haian.wohitech.com. IN TXT
+
+;; ANSWER SECTION:
+_acme-challenge.haian.wohitech.com. 599 IN TXT  "eDhLhhaaal5SUpAzMsMTdc5IoleG_RkZXFV0W-nTMW8"
+
+;; Query time: 365 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Sun Dec 16 23:55:34 DST 2018
+;; MSG SIZE  rcvd: 119
 ```
 
 记录解析成功
