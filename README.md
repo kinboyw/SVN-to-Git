@@ -13,7 +13,7 @@
 ## 代码调整和部署说明
 
 - [关于ConfCenter和Web4移出服务代码的更新](doc/对于ConfCenter和Web4移出服务代码的更新.md) 
-- [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md) 
+- [让Git支持Windows Symbolic link](doc/让Git支持Windows Symbolic link.md)  
 - [部署环境搭建--面向实施](doc/部署环境搭建--面向实施.md)
 - [关于Gitlab域名更换问题](./doc/关于Gitlab域名更换问题.md)
 - [关于子站多模板更新](./doc/子站多模板更新.md)
@@ -23,7 +23,7 @@
 - [SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
 - [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
 - [一点点历史——浏览器history](doc/a-little-bit-of-history.md)
-- [Simple-Page Applications And Server——单页面应用程序与服务器](doc/Simple-Page Applications And Server.md) 
+- [Simple-Page Applications And Server——单页面应用程序与服务器](doc/Simple-Page Applications And Server.md)  
 - [npm package.json中的`~`与`^`有什么不同](doc/difference-between-tilde-and-caret-in-npm-package.json-file.md)
 - [使用跨域——Using CORS](doc/using-cors.md)
 - [如何使用SSH协议获取gitlab仓库代码](./doc/如何使用ssh协议获取gitlab仓库的代码.md) 
@@ -33,7 +33,7 @@
 
 ## Linux
 
-- [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md)
+- [CentOS7.4搭建L2TPIPSec VPN](doc/CentOS7.4搭建L2TPIPSec VPN.md) 
 - [CentOS7.4配置网关路由服务器](doc/CentOS7.4配置网关路由服务器.md)
 - [解決Linux內核升級导致vmmon模块加载失败的问题](./doc/解決Linux內核升級导致vmmon模块加载失败的问题.md) 
 - [如何在ArchLinux上安装自签名SSL证书](./doc/如何在ArchLinux上安装自签名SSL证书.md) 
@@ -42,13 +42,13 @@
 
 ## 其他文档
 
-- [Nginx 配置文件nginx.conf中文详解](doc/Nginx 配置文件nginx.conf中文详解.md) 
+- [Nginx 配置文件nginx.conf中文详解](doc/Nginx 配置文件nginx.conf中文详解.md)  
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
 - [常用命令行](doc/常用命令行.md) 
 - [Git 基础](doc/Git 基础.md) 
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
 - [用vim写代码](doc/用vim写代码.md)
-- [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md)
+- [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md) 
 - [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 - [ike-scan扫描服务端的ike加密算法](doc/ike-scan扫描服务端的ike加密算法.md)
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
