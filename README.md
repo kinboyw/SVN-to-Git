@@ -45,14 +45,13 @@
 - [Nginx配置文件nginx.conf中文详解](./doc/Nginx-配置文件nginx.conf中文详解.md)  
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
 - [常用命令行](doc/常用命令行.md) 
-- [Git 基础](doc/Git 基础.md) 
+- [Git 基础](doc/Git基础.md) 
 - [使用Vimdiff解决git冲突](doc/使用Vimdiff解决git冲突.md)
 - [用vim写代码](doc/用vim写代码.md)
-- [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab 8822端口失效问题.md) 
+- [Gitlab的SSH协议端口8822失效的问题排查](doc/Gitlab-8822端口失效问题.md) 
 - [Calibre-web电子书网站的使用](doc/Calibre-web的使用.md)
 - [ike-scan扫描服务端的ike加密算法](doc/ike-scan扫描服务端的ike加密算法.md)
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
-- [用Quartz.net开发定时调度]
 - [创建交互式Windows任务计划](./doc/创建交互式Windows任务计划.md) 
 - [用Certbot部署Let‘sEncrypt的HTTPS证书](./doc/Certbot部署LetsEncrypt的HTTPS证书.md) 
 
