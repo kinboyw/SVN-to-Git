@@ -50,5 +50,8 @@ gitlab 中有两个地方可以使用 SSH ：
 > https 协议 origin 源替换成 ssh 协议的命令如下：
 >
 > ``` shell
-> 
+> cd <仓库目录>	#或者打开仓库文件夹，右键，GitBash
+> git remote -v 	#查看当前URL
+> git remote set-url origin git@example.com:example/example.git	#设置SSH协议URL，URL需要根据实际情况修改
 > ```
+>
