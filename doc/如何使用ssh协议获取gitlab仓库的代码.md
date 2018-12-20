@@ -42,3 +42,13 @@ gitlab 中有两个地方可以使用 SSH ：
 - 学会了可以装13，毕竟这种东西在 Windows下的应用比较少，Linux中则是很常见的
 - 多了一种选择吧，习惯以后就会觉得比 HTTP 方便
 - 其实主要原因是最近 HTTP 下载出了一点问题，外网配置使用了 Nginx 反向代理，使用 HTTP 下载时会出现一些奇奇怪怪的bug，暂时没有找到解决办法。用 SSH 就没有问题
+
+
+
+> P.S：[部署环境搭建，面向实施](https://gitlab.wohitech.com/wangjinbo/Svn-to-Git/blob/master/doc/%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA--%E9%9D%A2%E5%90%91%E5%AE%9E%E6%96%BD.md#%E6%9B%B4%E6%96%B0-2018-12-05-gitlab-%E4%BD%BF%E7%94%A8-ssh-%E5%8D%8F%E8%AE%AE) 中更新了部署环境对应的 SSH 协议的仓库地址，如果是 clone 新仓库，则直接复制后执行 `clone` 命令即可；如果是更新已有仓库，则需要将原有的 https 协议的 origin 源的 URL 替换成 SSH 协议的新地址，当然如果 https 协议地址可以成功更新就不需要换；
+>
+> https 协议 origin 源替换成 ssh 协议的命令如下：
+>
+> ``` shell
+> 
+> ```
