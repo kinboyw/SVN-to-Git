@@ -54,6 +54,7 @@
 - [用 LinqPad 进行快速开发](doc/LinqPad快速开发数据轮询持久化.md)
 - [创建交互式Windows任务计划](./doc/创建交互式Windows任务计划.md) 
 - [用Certbot部署Let‘sEncrypt的HTTPS证书](./doc/Certbot部署LetsEncrypt的HTTPS证书.md) 
+- [分析高德地图行政区注记数据](./doc/分析高德地图行政区注记数据.md)
 
 ## 外部文档 
 
