@@ -1,7 +1,6 @@
-# 从SVN迁移到Git的一些资料
-## 目录
+## Catalog
 
-## Git安装部署和配置
+## Git Installation & Configuration
 
 - [Git安装配置和操作基本操作演示](doc/Git安装配置和操作基本操作演示.md) 
 - [签出正式开发代码，修改，提交](doc/签出正式开发代码，修改，提交.md) 
@@ -10,7 +9,7 @@
 - [Git提交日志查看优化](./doc/FromSVNToGit/ConfigAfterInstall.md#%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA)
 - [只从Git仓库中移除已追踪的文件](./doc/FromSVNToGit/CommenCmd.md#%E4%BC%98%E9%9B%85%E5%88%A0%E9%99%A4%E8%A6%81%E5%BF%BD%E7%95%A5%E7%9A%84%E6%96%87%E4%BB%B6)
 
-## 代码调整和部署说明
+## Changing & Deploy
 
 - [关于ConfCenter和Web4移出服务代码的更新](doc/对于ConfCenter和Web4移出服务代码的更新.md) 
 - [让Git支持Windows Symbolic link](./doc/让Git支持Windows-Symbolic-link.md)  
@@ -18,7 +17,7 @@
 - [关于Gitlab域名更换问题](./doc/关于Gitlab域名更换问题.md)
 - [关于子站多模板更新](./doc/子站多模板更新.md)
 
-## 前端
+## Front End
 
 - [SINOPIA——私有npm仓库的使用](doc/SINOPIA——私有npm仓库.md)
 - [浏览器缓存策略——maxAge与maxStale](doc/浏览器缓存策略——maxAge与maxStale.md)
@@ -40,7 +39,7 @@
 - [生成并系统范围内安装自签名证书](./doc/在Linux上应用自签名证书.md) 
 - ...[Linux Shell 脚本]()
 
-## 其他文档
+## Other
 
 - [Nginx配置文件nginx.conf中文详解](./doc/Nginx-配置文件nginx.conf中文详解.md)  
 - [关于12.1服务器的配置](doc/关于12.1服务器的配置.md) 
@@ -56,15 +55,12 @@
 - [用Certbot部署Let‘sEncrypt的HTTPS证书](./doc/Certbot部署LetsEncrypt的HTTPS证书.md) 
 - [分析高德地图行政区注记数据](./doc/分析高德地图行政区注记数据.md)
 
-## 外部文档 
+## External Docs
 
-### 微软官方
+### About Revit
 
-- [框架设计指南——命名规则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/naming-guidelines)
-- [框架设计指南——类型设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/type)
-- [框架设计指南——成员设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/member)
-- [框架设计指南——扩展性设计](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/designing-for-extensibility)
-- [框架设计指南——异常的设计准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/exceptions)
-- [框架设计指南——使用准则](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/usage-guidelines)
-- [框架设计指南——常见的设计模式](https://docs.microsoft.com/zh-cn/dotnet/standard/design-guidelines/common-design-patterns)
+[Add-In Integration](http://help.autodesk.com/view/RVT/2019/ENU/?guid=Revit_API_Revit_API_Developers_Guide_Introduction_Add_In_Integration_html) 
 
+[RvtVa3c Source Code](https://github.com/va3c/RvtVa3c) 
+
+[Exporting RVT BIM to JSON, WebGL and Forge](https://thebuildingcoder.typepad.com/blog/2016/07/exporting-rvt-bims-to-webgl-and-forge.html) 
