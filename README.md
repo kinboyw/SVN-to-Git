@@ -64,3 +64,11 @@
 [RvtVa3c Source Code](https://github.com/va3c/RvtVa3c) 
 
 [Exporting RVT BIM to JSON, WebGL and Forge](https://thebuildingcoder.typepad.com/blog/2016/07/exporting-rvt-bims-to-webgl-and-forge.html) 
+
+### Web Push
+
+[Beginners guide to Web Push Notifications using Service Workers](https://blog.atulr.com/web-notifications/) 
+
+[向网络应用添加推送通知](https://developers.google.cn/web/fundamentals/codelabs/push-notifications/?spm=a2c4e.11153940.blogcont608805.61.57a12293W4y10F) 
+
+[Web Sockets vs. XMPP: Which Is Better For Chat Application?](https://medium.com/@thinkwik/web-sockets-vs-xmpp-which-is-better-for-chat-application-113e3520b327)  
