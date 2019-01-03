@@ -27,19 +27,19 @@
 
 #### 下载 `TenantServer` 
 
-```
+``` 
 git clone git@gitlab.wohitech.com:CivPublish/CloudWebPublish.git TenantServer
 ```
 
 如果服务器提示拒绝，则用 `powershell` 运行如下命令生成公钥
 
-```
+``` shell
 ssh-keygen
 ```
 
 一直回车，直到出现气泡图，运行如下命令
 
-```
+``` shell
 cat ~/.ssh/id_rsa.pub
 ```
 
