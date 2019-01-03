@@ -31,7 +31,7 @@
 git clone git@gitlab.wohitech.com:CivPublish/CloudWebPublish.git TenantServer
 ```
 
-如果服务器提示拒绝，则用 `powershell` 运行如下命令打印公钥
+如果服务器提示拒绝，则用 `Git-Bash` 运行如下命令打印公钥
 
 ``` shell
 cat ~/.ssh/id_rsa.pub
