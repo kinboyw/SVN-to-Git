@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [CloudPlatform服务部署](#cloudplatform%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2)
+    - [TenantServer部署](#tenantserver%E9%83%A8%E7%BD%B2)
+        - [部署环境](#%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83)
+        - [基础软件服务检查](#%E5%9F%BA%E7%A1%80%E8%BD%AF%E4%BB%B6%E6%9C%8D%E5%8A%A1%E6%A3%80%E6%9F%A5)
+        - [安装步骤](#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4)
+            - [下载 `TenantServer`](#%E4%B8%8B%E8%BD%BD-tenantserver)
+            - [修改配置](#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE)
+            - [部署子站模板](#%E9%83%A8%E7%BD%B2%E5%AD%90%E7%AB%99%E6%A8%A1%E6%9D%BF)
+            - [安装TenantServer 为 WindowsService](#%E5%AE%89%E8%A3%85tenantserver-%E4%B8%BA-windowsservice)
+            - [检查安装是否成功](#%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # CloudPlatform服务部署
 
 ## TenantServer部署
