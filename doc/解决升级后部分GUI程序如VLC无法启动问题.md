@@ -1,0 +1,33 @@
+# FIX 'X11 CONNECTION BROKE' ISSUE IN QT BASED GUI APPLICATIONS LIKE VLC
+
+![troublesome VLC](https://kowalcj0.github.io/img/2018/007/vlc.png)troublesome VLC
+
+If you ever encountered error like this when starting vlc:
+
+```shell
+$ vlc
+VLC media player 3.0.0-rc5 Vetinari (revision 3.0.0-rc5-0-gf53236af09)
+[0000560cfbe38410] main libvlc: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+The X11 connection broke: Maximum allowed requested length exceeded (code 4)
+XIO:  fatal IO error 22 (Invalid argument) on X server ":0"
+      after 447 requests (447 known processed) with 0 events remaining.
+QMutex: destroying locked mutex
+```
+
+Then you can fix it by setting the `QT_AUTO_SCREEN_SCALE_FACTOR` env variable to `0`, i.e.:
+
+```shell
+QT_AUTO_SCREEN_SCALE_FACTOR=0 vlc your_video_file.mkv
+```
+
+You can also modify the `.desktop` file so that this variable is always set, when you start the application via e.g. apps menu: In `/usr/share/applications/vlc.desktop` replace:
+
+```shell
+Exec=/usr/bin/vlc --started-from-file %U
+```
+
+with:
+
+```shell
+Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 /usr/bin/vlc --started-from-file %U
+```
